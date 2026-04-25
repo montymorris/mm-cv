@@ -1,11 +1,48 @@
-<object
-  data="montymorris-cv.pdf"
-  type="application/pdf"
-  width="100%"
-  height="100%"
->
-  <p>
-    Your browser does not support PDFs. [Download the
-    PDF](montymorris.co.uk/montymorris-cv.pdf) .
-  </p>
-</object>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV</title>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    object {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+      if (isMobile) {
+        window.location.href = "montymorris-cv.pdf";
+      }
+    });
+  </script>
+</head>
+
+<body>
+
+  <object
+    data="montymorris-cv.pdf"
+    type="application/pdf"
+    width="100%"
+    height="100%"
+  >
+    <p>
+      Your browser does not support PDFs.
+      <a href="montymorris-cv.pdf">Download the PDF</a>
+    </p>
+  </object>
+
+</body>
+</html>
